@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Merriweather Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    max-width: 100%;
+    padding: 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Garante que todos os cards fiquem em uma única linha */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    max-width: 100%;
+    padding: 0 10px; /* Adiciona um padding horizontal para evitar o corte no hover */
+}
+
+.card {
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    height: 70px;
+    width: 70px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 20px; /* Espaçamento entre os cards */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Garante que o conteúdo ocupe a altura total do card */
+}
+
+.card-img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}

@@ -7,7 +7,8 @@
 body {
     background-color: #ffffff;
     font-family: 'Merriweather Sans', sans-serif;
-    overflow-x: hidden;
+    overflow-y: hidden; /* Impede a rolagem vertical */
+    overflow-x: hidden; /* Impede a rolagem horizontal */
 }
 
 .container {
@@ -17,15 +18,18 @@ body {
     height: 35vh;
     max-width: 100%;
     padding: 0;
+    margin-bottom: 0;
+    overflow: hidden; /* Garante que nada transborde do container */
 }
 
 .card-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap; /* Garante que todos os cards fiquem em uma única linha */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Adiciona rolagem horizontal apenas se for necessário */
     max-width: 100%;
-    padding: 0 10px; /* Adiciona um padding horizontal para evitar o corte no hover */
+    padding: 0 10px;
+    margin-bottom: 0;
 }
 
 .card {
@@ -37,15 +41,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 20px; /* Espaçamento entre os cards */
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .card-body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Garante que o conteúdo ocupe a altura total do card */
+    height: 100%;
+    margin-bottom: 0;
 }
 
 .card-img {

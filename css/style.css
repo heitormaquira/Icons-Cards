@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 30vh;
     max-width: 100%;
     padding: 0;
     margin-bottom: 0;
@@ -24,11 +24,11 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza os cards */
     flex-wrap: nowrap;
     overflow-x: auto; /* Adiciona rolagem horizontal apenas se for necessário */
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     margin-bottom: 0;
 }
 
@@ -43,6 +43,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card:last-child {
+    margin-right: 0; /* Remove o margin-right do último card */
 }
 
 .card-body {

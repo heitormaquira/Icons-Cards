@@ -36,13 +36,14 @@ body {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-    height: 75px;
+    height: 75px; /* Altura fixa */
     width: 100px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 20px; /* Espaçamento entre os cards */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Impede que a imagem transborde ao escalar */
 }
 
 .card:last-child {
@@ -59,8 +60,12 @@ body {
 
 .card-img {
     width: 45px;
-    height: auto;
-    transition: transform 0.3s ease;
+    height: auto; /* Permite que a altura se ajuste automaticamente */
+    max-height: 100%; /* Limita a altura da imagem */
+    max-width: 100%; /* Limita a largura da imagem */
+    align-items: center;
+    object-fit: contain; /* Mantém a proporção da imagem */
+    transition: none; /* Remove qualquer transição na imagem */
 }
 
 .card:hover {

@@ -59,10 +59,10 @@ body {
 }
 
 .card-img {
-    width: 45px;
+    width: 70px;
     height: auto; /* Permite que a altura se ajuste automaticamente */
-    max-height: 100%; /* Limita a altura da imagem */
-    max-width: 100%; /* Limita a largura da imagem */
+    max-height: 110%; /* Limita a altura da imagem */
+    max-width: 110%; /* Limita a largura da imagem */
     align-items: center;
     object-fit: contain; /* Mantém a proporção da imagem */
     transition: none; /* Remove qualquer transição na imagem */
